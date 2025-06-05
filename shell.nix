@@ -5,7 +5,7 @@ pkgs.mkShell {
   # These are the system-level dependencies Nix will provide.
   buildInputs = [
     # Python and its tools
-    pkgs.python314 # Or pkgs.python310, pkgs.python312, etc. Choose your preferred Python version.
+    pkgs.python313 # Or pkgs.python310, pkgs.python312, etc. Choose your preferred Python version.
     # Optional: if you prefer pipenv over pip+venv
 
     # Web browsers and their respective drivers for Selenium
@@ -49,6 +49,7 @@ pkgs.mkShell {
   #
   pythonWithPackages = pkgs.python313.withPackages (p: [
     p.pip
+    #p.openai-whisper
 
   ]);
 }
